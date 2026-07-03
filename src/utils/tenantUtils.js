@@ -4,19 +4,40 @@
 // localhost → null (no tenant)
 
 export const getSubdomain = () => {
-  const host  = window.location.hostname; // e.g. acme.localhost
-  const parts = host.split('.');
+  const host = window.location.hostname.toLowerCase();
 
-  // localhost only → no tenant
-  if (parts.length === 1) return null;
+  // Localhost
+  if (host === "localhost") return null;
 
-  const sub = parts[0].toLowerCase();
+  // Vercel deployment is the main site
+  if (host.endsWith(".vercel.app")) return null;
 
-  // Ignore main site subdomains
-  const ignored = ['www', 'api', 'medicloud', 'localhost', 'lvh'];
+  // InfinityFree backend
+  if (host.endsWith(".infinityfreeapp.com")) return null;
+
+  const parts = host.split(".");
+
+  if (parts.length < 2) return null;
+
+  const sub = parts[0];
+
+  const ignored = [
+    "www",
+    "api",
+    "localhost",
+    "lvh",
+    "medicloud",
+  ];
+
   if (ignored.includes(sub)) return null;
 
-  return sub; // → 'acme'
+  return sub;
+};
+
+export const getTenantApiBase = () => {
+  const sub = getSubdomain();
+  if (!sub) return null;
+  return process.env.REACT_APP_TENANT_API_BASE;
 };
 
 // Build API base URL per tenant
