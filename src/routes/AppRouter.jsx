@@ -17,10 +17,8 @@ const MasterLoginPage = lazy(() => import('../pages/Landing/MasterLoginPage'));
 // Tenant Auth Pages
 const LoginPage         = lazy(() => import("../pages/Auth/LoginPage"));
 const RegisterPage      = lazy(() => import("../pages/Auth/RegisterPage"));
-const ChangePasswordPage = lazy(() => import("../pages/Auth/ChangePasswordPage"));
 
 // Tenant Dashboard Pages
-const DashboardPage     = lazy(() => import("../pages/Dashboard/DashboardPage"));
 const StaffPage         = lazy(() => import("../pages/Staff/StaffPage"));
 const UserStatus         = lazy(() => import("../pages/Users/UserStatus"));
 const PatientsPage      = lazy(() => import("../pages/Patients/PatientsPage"));
