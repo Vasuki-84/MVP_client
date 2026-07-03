@@ -40,9 +40,3 @@ export const getTenantApiBase = () => {
   return process.env.REACT_APP_TENANT_API_BASE;
 };
 
-// Build API base URL per tenant
-export const getTenantApiBase = () => {
-  const sub = getSubdomain();
-  if (!sub) return null;
-  return process.env.REACT_APP_TENANT_API_BASE;
-};
