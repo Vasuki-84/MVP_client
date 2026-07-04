@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# 🏥 MediCloud – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern multi-tenant Healthcare Management System built with React.js, Redux Toolkit, Material UI, and Axios. The application provides a secure and responsive interface for hospitals to manage patients, appointments, prescriptions, billing, and staff.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Multi-Tenant Architecture
+- JWT Authentication
+- Role-Based Access Control (Admin, Doctor, Nurse, Patient)
+- Dashboard Analytics
+- Patient Management
+- Appointment Scheduling
+- Prescription Management
+- Billing Management
+- Staff Management
+- Responsive UI
+- Offline Queue Support (IndexedDB)
+- Automatic Token Refresh
+- CSRF Protection
+- REST API Integration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- React.js
+- Redux Toolkit
+- Redux Saga
+- Material UI
+- Axios
+- React Router
+- IndexedDB
+- JavaScript (ES6+)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
+src/
+│
+├── app/
+├── components/
+├── config/
+├── hooks/
+├── modules/
+├── pages/
+├── services/
+├── utils/
+└── assets/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙ Installation
 
-### `npm run eject`
+```bash
+git clone <repository-url>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+cd MVP-Client
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Runs on
 
-## Learn More
+http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🏗 Production Build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm run build
 
-### Code Splitting
+🌐 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Frontend can be deployed on
 
-### Analyzing the Bundle Size
+Vercel
+Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📸 Modules
+Authentication
+Dashboard
+Patients
+Appointments
+Prescriptions
+Billing
+Staff
+Settings
 
-### Making a Progressive Web App
+👨‍💻 Developed By
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Vasuki Thangaraj

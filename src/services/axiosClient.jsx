@@ -26,10 +26,10 @@ export const clearTokens = () => {
 const axiosClient = axios.create({
   baseURL: API_BASE,
   withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-  },
+  // headers: {
+  //   'Content-Type': 'application/json',
+  //   'Accept': 'application/json',
+  // },
 });
 
 // ── Request interceptor ────────────────────────────────
@@ -39,8 +39,8 @@ axiosClient.interceptors.request.use(
 
     const token = getAccessToken();
     if (token) config.headers['Authorization'] = `Bearer ${token}`;
-    if (csrfToken) config.headers['X-CSRF-Token'] = csrfToken;
-    if (subdomain) config.headers['X-Tenant'] = subdomain;
+    // if (csrfToken) config.headers['X-CSRF-Token'] = csrfToken;
+    // if (subdomain) config.headers['X-Tenant'] = subdomain;
     return config;
   },
   (error) => Promise.reject(error)
