@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {
   Box, TextField, Button, Typography,
   IconButton, InputAdornment, FormControlLabel,
-  Checkbox, Alert, CircularProgress, Chip, Card
+  Checkbox, Alert, CircularProgress, Chip
 } from '@mui/material';
 import {
   Visibility, VisibilityOff, LocalHospital,
-  LockOutlined, EmailOutlined, VerifiedUser, Person
+  LockOutlined, EmailOutlined, VerifiedUser
 } from '@mui/icons-material';
 import { tokens } from '../../themes/theme';
 import useAuth from '../../modules/auth/hooks/useAuth';
@@ -151,50 +151,50 @@ transition: background .3s ease;
 `;
 
 // ── Keep StyledCard for Register/ChangePassword ────────
- const StyledCard = styled(Card)`
-  width: 100%;
-  max-width: 440px;
-  border-radius: 16px !important;
-  background: ${({theme})=>theme.surface};
-border:1px solid ${({theme})=>theme.divider};
+//  const StyledCard = styled(Card)`
+//   width: 100%;
+//   max-width: 440px;
+//   border-radius: 16px !important;
+//   background: ${({theme})=>theme.surface};
+// border:1px solid ${({theme})=>theme.divider};
 
-box-shadow:${({theme}) =>
-  theme.bg === '#0D1117'
-    ? '0 20px 60px rgba(0,0,0,.5)'
-    : '0 20px 60px rgba(0,0,0,.08)'};
-`;
+// box-shadow:${({theme}) =>
+//   theme.bg === '#0D1117'
+//     ? '0 20px 60px rgba(0,0,0,.5)'
+//     : '0 20px 60px rgba(0,0,0,.08)'};
+// `;
 
-// ── Auth page wrapper for Register/ChangePassword ──────
-const AuthPageWrapper = styled.div`
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1565C0 0%, #003C8F 60%, #1A1A2E 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-`;
+// // ── Auth page wrapper for Register/ChangePassword ──────
+// const AuthPageWrapper = styled.div`
+//   min-height: 100vh;
+//   background: linear-gradient(135deg, #1565C0 0%, #003C8F 60%, #1A1A2E 100%);
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 20px;
+// `;
 
-// ── Divider with text ──────────────────────────────────
- const OrDivider = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 16px 0;
-  color: ${({ theme }) => theme.textMuted};
-  font-size: 13px;
+// // ── Divider with text ──────────────────────────────────
+//  const OrDivider = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+//   margin: 16px 0;
+//   color: ${({ theme }) => theme.textMuted};
+//   font-size: 13px;
 
-  &::before, &::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: ${({ theme }) => theme.divider};
-  }
-`;
+//   &::before, &::after {
+//     content: '';
+//     flex: 1;
+//     height: 1px;
+//     background: ${({ theme }) => theme.divider};
+//   }
+// `;
 
 const HOSPITAL_IMAGE = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80';
 
 const LoginPage = () => {
-  const { login, loading, error, isAuthenticated, clearAuthError } = useAuth();
+  const { login, loading, error, clearAuthError } = useAuth();
   const { company_name } = useTenant();
   const navigate = useNavigate();
   const theme = useTheme();
@@ -215,7 +215,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (error) clearAuthError();
-  }, [email, password]);
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();

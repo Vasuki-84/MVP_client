@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import { Box, Chip } from '@mui/material';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import CheckIcon         from '@mui/icons-material/Check';
 import ArrowForwardIcon  from '@mui/icons-material/ArrowForward';
-import PeopleIcon        from '@mui/icons-material/People';
-import CalendarIcon      from '@mui/icons-material/CalendarMonth';
-import ReceiptIcon       from '@mui/icons-material/Receipt';
-import SecurityIcon      from '@mui/icons-material/Security';
-import SpeedIcon         from '@mui/icons-material/Speed';
-import CloudIcon         from '@mui/icons-material/Cloud';
 import {plans,features} from './Config'
 
 // ── Animations ─────────────────────────────────────────

@@ -11,7 +11,6 @@ import EditIcon            from '@mui/icons-material/Edit';
 import DeleteIcon          from '@mui/icons-material/Delete';
 import SearchIcon          from '@mui/icons-material/Search';
 import RefreshIcon         from '@mui/icons-material/Refresh';
-import FilterListIcon      from '@mui/icons-material/FilterList';
 import PeopleAltIcon       from '@mui/icons-material/PeopleAlt';
 import MaleIcon            from '@mui/icons-material/Male';
 import FemaleIcon          from '@mui/icons-material/Female';
@@ -242,7 +241,7 @@ const PatientsPage = () => {
   useEffect(() => { 
     fetchPatients();
     fetchDropdownLists();
-   }, []); 
+   }); 
 
   useEffect(() => {
     if (success) {

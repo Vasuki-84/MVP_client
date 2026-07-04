@@ -69,7 +69,6 @@ function* handleDeletePatient(action) {
 
 function* handleFetchDropdownLists(action) {
   try {
-    const userRole = action.payload; // Passed from the component
     let patients = [];
     const patientsRes = yield call(fetchPatientsDropAPI);
     patients = patientsRes.data.data || patientsRes.data;

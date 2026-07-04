@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { setAccessToken, setCsrfToken, clearTokens } from '../../services/axiosClient';
+import { setAccessToken, clearTokens } from '../../services/axiosClient';
 import { loginAPI, logoutAPI } from './authAPI';
 import { decodeJWT } from '../../utils/jwtUtils';
 import {

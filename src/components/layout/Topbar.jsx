@@ -4,9 +4,7 @@ import {
   IconButton, Tooltip, Chip
 } from '@mui/material';
 import LogoutIcon        from '@mui/icons-material/Logout';
-import DarkModeIcon     from '@mui/icons-material/DarkMode';
-import LightModeIcon    from '@mui/icons-material/LightMode';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+
 import MenuIcon          from '@mui/icons-material/Menu';
 import { useSelector }  from 'react-redux';
 import useAuth          from '../../modules/auth/hooks/useAuth';
@@ -27,10 +25,8 @@ const roleColors = {
 };
 
 const Topbar = ({ sidebarOpen, isMobile, onMobileToggle }) => {
-  const { company_name } = useTenant();
   const { user }              = useSelector((state) => state.auth);
   const { logout }            = useAuth();
-  const { mode, toggleTheme } = useThemeMode();
   const location              = useLocation();
   const role                  = user?.role || '';
 

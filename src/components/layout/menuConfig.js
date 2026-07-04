@@ -5,7 +5,6 @@ import EventIcon from '@mui/icons-material/Event';
 import ChatIcon from '@mui/icons-material/Chat';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import MedicationIcon from '@mui/icons-material/Medication';
 import SettingsIcon from '@mui/icons-material/Settings';
 

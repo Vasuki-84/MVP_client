@@ -8,7 +8,6 @@ import {
   Typography,
   InputAdornment,
   IconButton,
-  Chip,
   LinearProgress,
 } from "@mui/material";
 import {
@@ -20,9 +19,7 @@ import {
   AlternateEmail,
   LockOutlined,
   Language,
-  VerifiedUser,
   Check,
-  Launch,
   ArrowForward,
 } from "@mui/icons-material";
 import styled, { keyframes } from "styled-components";

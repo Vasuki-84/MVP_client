@@ -180,7 +180,7 @@ const RxCard = ({ rx, index, canEdit, canDelete, canAdvance, onEdit, onDelete, o
       onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = t.cardShadow; }}
     >
       {/* Card top accent */}
-      <div style={{ height: "4px", borderRadius: "4px 4px 0 0", background: STATUS_CONFIG[rx.status]?.gradient || "#ccc", margin: "-20px -20px 0 -20px", borderRadius: "20px 20px 0 0" }} />
+      <div style={{ height: "4px", borderRadius: "4px 4px 0 0", background: STATUS_CONFIG[rx.status]?.gradient || "#ccc", margin: "-20px -20px 0 -20px" }} />
 
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "8px" }}>

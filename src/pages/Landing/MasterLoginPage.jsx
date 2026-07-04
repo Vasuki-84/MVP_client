@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   Box, Typography, TextField, InputAdornment,
   IconButton, Alert, CircularProgress, Dialog,
-  DialogContent, Chip, Divider, Tooltip, Button
+  DialogContent, Chip, Button
 } from '@mui/material';
 import {
   AlternateEmail, LockOutlined, Visibility,
@@ -241,18 +241,18 @@ const TenantPortalModal = ({ open, tenant, onClose }) => {
   );
 };
 
-const DetailRow = ({ icon, label, value }) => (
-  <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#64748b' }}>
-      {icon}
-      <Typography fontSize={13} color="#64748b">{label}</Typography>
-    </Box>
-    {typeof value === 'string'
-      ? <Typography fontSize={13} fontWeight={600} color="#0f172a">{value}</Typography>
-      : value
-    }
-  </Box>
-);
+// const DetailRow = ({ icon, label, value }) => (
+//   <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+//     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#64748b' }}>
+//       {icon}
+//       <Typography fontSize={13} color="#64748b">{label}</Typography>
+//     </Box>
+//     {typeof value === 'string'
+//       ? <Typography fontSize={13} fontWeight={600} color="#0f172a">{value}</Typography>
+//       : value
+//     }
+//   </Box>
+// );
 
 const MasterLoginPage = () => {
   const navigate = useNavigate();

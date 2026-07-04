@@ -39,7 +39,6 @@ const getTokens = (mode) => ({
 
 // ─── Status Badge ──────────────────────────────────────────────────────────────
 const StatusBadge = ({ status, mode }) => {
-  const t = getTokens(mode);
   const isPaid = status === "paid";
   return (
     <span style={{

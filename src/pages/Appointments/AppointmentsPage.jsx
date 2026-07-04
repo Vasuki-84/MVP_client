@@ -275,7 +275,7 @@ const AppointmentsPage = () => {
     if (user?.role) {
       fetchDropdownLists(user.role); 
     }
-    }, []);
+    }, [user?.role]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (success) {

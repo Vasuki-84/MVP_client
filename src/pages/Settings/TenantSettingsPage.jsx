@@ -1,8 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  Box, Typography, Card, CardContent, Stack,
-  Divider, Button, CircularProgress
+  Box, Typography, Card, CardContent, Stack, Button, CircularProgress
 } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';

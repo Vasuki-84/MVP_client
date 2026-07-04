@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Toolbar, useMediaQuery, useTheme, Drawer ,IconButton} from '@mui/material'; // Removed invalid ", state"
+import React, { useState } from 'react';
+import { Box, useMediaQuery, useTheme, Drawer ,IconButton} from '@mui/material'; // Removed invalid ", state"
 import { Outlet } from 'react-router-dom'; // Added for nested route compatibility
 import Sidebar from './Sidebar';
-import Topbar  from './Topbar';
-import { fetchCsrf } from '../../hooks/useAppInit';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const OPEN   = 240;

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import {
   Box, TextField, Button, Typography,
-  IconButton, InputAdornment, Alert,
-  CircularProgress, MenuItem, Chip
+  IconButton, InputAdornment, Alert, MenuItem, Chip
 } from '@mui/material';
 import {
   Visibility, VisibilityOff, LocalHospital,

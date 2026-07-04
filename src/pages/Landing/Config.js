@@ -1,6 +1,3 @@
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import CheckIcon         from '@mui/icons-material/Check';
-import ArrowForwardIcon  from '@mui/icons-material/ArrowForward';
 import PeopleIcon        from '@mui/icons-material/People';
 import CalendarIcon      from '@mui/icons-material/CalendarMonth';
 import ReceiptIcon       from '@mui/icons-material/Receipt';

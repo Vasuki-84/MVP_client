@@ -7,7 +7,6 @@ import {
 import ChevronLeftIcon   from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon  from '@mui/icons-material/ChevronRight';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import styled            from 'styled-components';
 import { menuItems }     from './menuConfig';
 import { useSelector }   from 'react-redux';
 import {
@@ -21,9 +20,6 @@ import {
 } from '../../styles/sidebar.styles';
 import useAuth          from '../../modules/auth/hooks/useAuth';
 import LogoutIcon        from '@mui/icons-material/Logout';
-
-const OPEN   = 240;
-const CLOSED = 64;
 
 
 // ──────────────────────────────────────────────────────────────
