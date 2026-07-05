@@ -562,13 +562,26 @@ const TenantSignupPage = () => {
             </URLBox>
 
             <SubmitBtn2
-              onClick={() =>
-                window.open(
-                  `http://${success}.lvh.me:3000/login`,
-                  "_blank",
-                  "noopener,noreferrer",
-                )
-              }
+              onClick={() => {
+                const currentHost = window.location.hostname;
+                const protocol = window.location.protocol;
+
+                // Local Development
+                if (currentHost === "localhost" || currentHost === "lvh.me") {
+                  window.open(
+                    `http://${success}.lvh.me:3000/login`,
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
+                } else {
+                  // Live Deployment
+                  window.open(
+                    `${protocol}//${currentHost}/login?tenant=${success}`,
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
+                }
+              }}
             >
               Launch Digital Portal
               <ArrowForward sx={{ fontSize: 18 }} />

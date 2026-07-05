@@ -1,42 +1,51 @@
-// Read subdomain from browser URL
-// acme.localhost → 'acme'
-// medicloud.localhost → null (main site)
-// localhost → null (no tenant)
+// Returns tenant from URL parameter in production
+// Returns tenant from subdomain in local development
 
 export const getSubdomain = () => {
   const host = window.location.hostname.toLowerCase();
 
+  // -------------------------------
+  // Production (Vercel)
+  // Example:
+  // https://mvp-client-peach.vercel.app/login?tenant=apollo
+  // -------------------------------
+  if (host.endsWith(".vercel.app")) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("tenant");
+  }
+
+  // -------------------------------
   // Localhost
-  if (host === "localhost") return null;
+  // Example:
+  // http://apollo.lvh.me:3000/login
+  // -------------------------------
+  if (
+    host === "localhost" ||
+    host.endsWith(".lvh.me")
+  ) {
+    const parts = host.split(".");
 
-  // Vercel deployment is the main site
-  if (host.endsWith(".vercel.app")) return null;
+    if (parts.length > 2) {
+      const sub = parts[0];
 
-  // InfinityFree backend
-  if (host.endsWith(".infinityfreeapp.com")) return null;
+      const ignored = ["www", "api", "lvh", "medicloud"];
 
-  const parts = host.split(".");
+      if (!ignored.includes(sub)) {
+        return sub;
+      }
+    }
 
-  if (parts.length < 2) return null;
+    return null;
+  }
 
-  const sub = parts[0];
+  // InfinityFree backend itself never has tenant
+  if (host.endsWith(".infinityfreeapp.com")) {
+    return null;
+  }
 
-  const ignored = [
-    "www",
-    "api",
-    "localhost",
-    "lvh",
-    "medicloud",
-  ];
-
-  if (ignored.includes(sub)) return null;
-
-  return sub;
+  return null;
 };
 
 export const getTenantApiBase = () => {
-  const sub = getSubdomain();
-  if (!sub) return null;
   return process.env.REACT_APP_TENANT_API_BASE;
 };
-
